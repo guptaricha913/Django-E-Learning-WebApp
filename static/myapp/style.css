@@ -1,0 +1,13 @@
+h1 {
+    background-color: #f9f9f9;
+    font-family: "Lucida Sans";
+    color: #2e3a70;
+    position: center;
+    font-size: 2rem;
+    padding-left: 40%;
+}
+.hbar1 {
+ display: inline;
+ margin: 15px;
+}
+

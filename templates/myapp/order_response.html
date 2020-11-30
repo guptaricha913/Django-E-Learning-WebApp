@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello {{ username }} {% endblock %}
+{% block body_block %}
+    <p><b>Order</b></p>
+        {{ order }}
+
+    <br/>
+    <br/>
+    <table>
+        <tr>
+            <td><b>No.</b></td>
+            <td><b>Course Name</b></td>
+            <td><b>Category</b></td>
+            <td><b>Length</b></td>
+        </tr>
+
+        {% for course in courses %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ course.title }}</td>
+                <td>{{ course.topic.name }}</td>
+                <td>{{ course.topic.length }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

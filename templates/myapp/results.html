@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello {{ username }} {% endblock %}
+{% block body_block %}
+    <p>Student Name: {{ name }}</p>
+    <table>
+        <tr>
+            <td><b>Course Name</b></td>
+            <td><b>Category</b></td>
+        </tr>
+        {% for course in courselist %}
+            <tr>
+                <td>{{ course.title }}</td>
+                <td>{{ course.topic.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

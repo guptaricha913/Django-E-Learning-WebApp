@@ -1,0 +1,36 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello {{ username }} {% endblock %}
+{% block body_block %}
+    <p><b>Full Name : </b>{{ firstName }} {{ lastName }}</p>
+
+    <br/>
+    <p><b>Courses Ordered:</b></p>
+    <table>
+        <tr>
+            <td><b>No.</b></td>
+            <td><b>Course Name</b></td>
+        </tr>
+        {% for course in registered_courses %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ course }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br/>
+
+    <p><b>Interested in:</b></p>
+    <table>
+        <tr>
+            <td><b>No.</b></td>
+            <td><b>Topic</b></td>
+        </tr>
+        {% for topic in interested_in %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ topic }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

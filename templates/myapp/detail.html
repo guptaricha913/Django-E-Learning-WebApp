@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello {{ username }} {% endblock %}
+{% block title %}‘eLearning - detail page{% endblock %}
+{% block body_block %}
+    <body>
+        {% if topic %}
+            <p> Topic Name: {{ topic.name.upper }} Topic Length: {{ topic.length }}</p>
+            <p>List of available courses:</p>
+            {% for course in course_list %}
+                <li>{{ course }}</li>
+            {% endfor %}
+        {% endif %}
+    </body>
+{% endblock %}
